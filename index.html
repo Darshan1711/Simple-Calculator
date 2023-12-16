@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Simple Calculator</h1>
+        Enter operator (+,-,*,/) : <input type="text" id="f1"><br><br>
+        Enter First number : <input type="number" id="f2"><br><br>
+        Enter Second number : <input type="number" id="f3"><br><br>
+        <button onclick="fun()">Genrate</button><br><br>
+        <p id="s1"></p>
+
+        <script>
+        function fun(){
+            let f1 = document.getElementById("f1").value;
+            let a = parseInt(document.getElementById("f2").value);
+            let b = parseInt(document.getElementById("f3").value);
+            let result;
+
+            if(f1=="+"){
+
+                result = a + b;
+            }
+            else if(f1=="-"){
+
+                result = a - b;
+
+            }
+            else if(f1=="*"){
+                result = a * b;
+
+            }
+            else if(f1=="/"){
+
+            result = a / b;
+
+            }
+            else{
+                result = "input is invalid";
+            }
+
+            document.getElementById("s1").innerHTML = `Result: ${result}`;
+            console.log(result)
+        }
+
+        </script>
+    </body>
+</html>
